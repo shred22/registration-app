@@ -1,0 +1,102 @@
+
+
+
+<main class="my-form">
+  <div class="cotainer">
+      <div class="row justify-content-center">
+          <div class="col-md-8">
+                  <div class="card">
+                      <div class="card-header">Register</div>
+                      <div class="card-body">
+                          <form  (ngSubmit)="!regForm.invalid && registerCandidate()" #regForm="ngForm">
+                              <div class="form-group row">
+                                  <label for="full_name" class="col-md-4 col-form-label text-md-right">Full Name</label>
+                                  <div class="col-md-6">
+                                      <input type="text" #name="ngModel" [(ngModel)]="candidate.name" id="full_name" class="form-control" name="full-name">
+                                  </div>
+
+                              </div>
+                              <div class="form-group row">
+                                <label for="age" class="col-md-4 col-form-label text-md-right">Age</label>
+                                <div class="col-md-6">
+                                    <input type="number" #age="ngModel" [(ngModel)]="candidate.age" id="age" class="form-control"  name="age">
+                                </div>
+
+                            </div>
+                              <div class="form-group row">
+                                  <label for="blood_group" class="col-md-4 col-form-label text-md-right">Blood Group</label>
+                                  <div class="col-md-6">
+                                      <input type="text" #bloodGroup="ngModel" [(ngModel)]="candidate.bloodGroup" id="blood_group" class="form-control" name="blood-group">
+                                  </div>
+                              </div>
+
+                              <div class="form-group row">
+                                  <label for="user_name" class="col-md-4 col-form-label text-md-right">User Name</label>
+                                  <div class="col-md-6">
+                                      <input type="text" #username="ngModel" [(ngModel)]="candidate.username" id="user_name" class="form-control" name="username">
+                                  </div>
+                              </div>
+
+                              <div class="form-group row">
+                                <label for="user_name" class="col-md-4 col-form-label text-md-right">Password</label>
+                                <div class="col-md-6">
+                                    <input type="password" #password="ngModel" [(ngModel)]="candidate.password" id="password" class="form-control" name="password">
+                                </div>
+                            </div>
+
+                              <div class="form-group row">
+                                  <label for="disability" class="col-md-4 col-form-label text-md-right">Disability</label>
+                                  <div class="col-md-6">
+                                      <input type="radio" #physicalDisability="ngModel" [(ngModel)]="candidate.physicalDisability" id="true" name="true" value="true">
+                                      <label for="true" class="disabilityLabel">Yes</label>
+                                      <input type="radio" #physicalDisability="ngModel" [(ngModel)]="candidate.physicalDisability" id="false" name="false" value="false" class="disabilityRadio">
+                                      <label for="false" class="disabilityLabel">No</label>
+                                  </div>
+                              </div>
+
+                              <div class="form-group row">
+                                  <label for="addressLine1" class="col-md-4 col-form-label text-md-right">Address Line 1</label>
+                                  <div class="col-md-6">
+                                      <input type="text"  #addressLine1="ngModel" [(ngModel)]="candidate.address.addressLine1" id="addressLine1" name="addressLine1" class="form-control">
+                                  </div>
+                              </div>
+
+                              <div class="form-group row">
+                                <label for="addressLine2" class="col-md-4 col-form-label text-md-right">Address Line 2</label>
+                                <div class="col-md-6">
+                                    <input type="text"  #addressLine2="ngModel" [(ngModel)]="candidate.address.addressLine2" id="addressLine2" name="addressLine1" class="form-control">
+                                </div>
+                            </div>
+
+                              <div class="form-group row">
+                                  <label for="landmark" class="col-md-4 col-form-label text-md-right">Landmark</label>
+                                  <div class="col-md-6">
+                                      <input type="text"  #landmark="ngModel" [(ngModel)]="candidate.address.landmark"id="landmark" class="form-control" name="landmark">
+                                  </div>
+                              </div>
+
+                              <div class="form-group row">
+                                <label for="pincode" class="col-md-4 col-form-label text-md-right">PINCODE</label>
+                                <div class="col-md-6">
+                                    <input type="text"  #pincode="ngModel" [(ngModel)]="candidate.address.pincode" id="pincode" class="form-control" name="pincode">
+                                </div>
+                            </div>
+
+
+                                  <div class="col-md-6 offset-md-4">
+                                      <button type="submit" class="btn btn-primary">
+                                      Register
+                                      </button>
+                                  </div>
+                              </form>
+                      </div>
+                  </div>
+          </div>
+      </div>
+  </div>
+
+</main>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>

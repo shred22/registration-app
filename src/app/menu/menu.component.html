@@ -1,0 +1,16 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <div><a href="http://www.github.com/shred22" class="navbar-brand">Vishwanand Yog</a></div>
+    <ul class="navbar-nav">
+      <li><a *ngIf="httpService.isUserLoggedIn()" routerLink="/home" class="nav-link">Home</a></li>
+      <li><a *ngIf="httpService.isUserLoggedIn()" routerLink="/gallery" class="nav-link">Gallery</a></li>
+      <li><a *ngIf="httpService.isUserLoggedIn()" routerLink="/events" class="nav-link">Events</a></li>
+    </ul>
+
+    <ul class="navbar-nav navbar-collapse justify-content-end">
+      <li><a routerLink="/login" class="nav-link">Login</a></li>
+      <li><a *ngIf="httpService.isUserLoggedIn()" routerLink="logout" class="nav-link">Logout</a></li>
+    </ul>
+
+  </nav>
+</header>
