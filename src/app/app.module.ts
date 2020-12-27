@@ -13,6 +13,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { InterceptorService } from './service/http/interceptor.service';
 import { LogoutComponent } from './logout/logout.component';
 import { FooterComponent } from './footer/footer.component';
+import { AddemployeeComponent } from './addemployee/addemployee.component';
+import { DeleteEmployeeComponent } from './delete-employee/delete-employee.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { FooterComponent } from './footer/footer.component';
     LoginComponent,
     WelcomeComponent,
     LogoutComponent,
-    FooterComponent
+    FooterComponent,
+    AddemployeeComponent,
+    DeleteEmployeeComponent
   ],
   imports: [
     BrowserModule,

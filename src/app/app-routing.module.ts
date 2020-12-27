@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AddemployeeComponent } from './addemployee/addemployee.component';
+import { DeleteEmployeeComponent } from './delete-employee/delete-employee.component';
 import { HomeComponent } from './home/home.component';
 import { ListOfUsersComponent } from './list-of-users/list-of-users.component';
 import { LoginComponent } from './login/login.component';
@@ -16,7 +18,10 @@ const routes: Routes = [
   {path: "logout", component: LogoutComponent, canActivate:[RouterGuardService]},
   {path: "register", component: RegisterComponent},
   {path: "contact-list", component: ListOfUsersComponent, canActivate:[RouterGuardService]},
-  {path: "welcome", component: WelcomeComponent, canActivate:[RouterGuardService]}
+  {path: "welcome", component: WelcomeComponent, canActivate:[RouterGuardService]},
+  {path: "listUsers", component: ListOfUsersComponent, canActivate:[RouterGuardService]},
+  {path: "addEmployee", component: AddemployeeComponent, canActivate:[RouterGuardService]},
+  {path: "deleteEmployee", component: DeleteEmployeeComponent, canActivate:[RouterGuardService]}
 ];
 
 @NgModule({

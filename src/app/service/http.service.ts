@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Candidate } from '../register/register.component';
 import { map } from 'rxjs/operators';
+import { Employee } from '../list-of-users/list-of-users.component';
 
 export const TOKEN = 'token'
 export const AUTHENTICATED_USER = 'authenticatedUser'
@@ -65,4 +66,16 @@ isUserAuthenticated: boolean = false;
 
   }
 
+  getAllEmployees() {
+    return this.httpClient.get<Employee[]>(`http://localhost:8080/employees`);
+  }
+
+  saveEmployee(emp: Employee) {
+    console.log(`posting emp ${JSON.stringify(emp)}`)
+    return this.httpClient.post(`http://localhost:8080/employee`, emp);
+  }
+
+  deleteEmployee(employeedId: number) {
+    return this.httpClient.delete(`http://localhost:8080/employee/${employeedId}`)
+  }
 }

@@ -1,0 +1,12 @@
+<div class="jumbotron">
+  <div class="container">
+    <h2>Enter Employee Id to Delete</h2>
+  </div>
+</div>
+<form class="navbar-form navbar-left" (ngSubmit)="!delForm.invalid && empId.value != 0 && deleteEmployee()" #delForm="ngForm">
+  <div class="form-group">
+    <input type="text" #empId='ngModel' [(ngModel)]="employee.employeeId" class="form-control col-md-2" placeholder="Employee Id" name="empId">
+
+  </div>
+  <button type="submit" class="btn btn-danger">Delete</button>
+</form>

@@ -22,12 +22,14 @@ export class InterceptorService implements HttpInterceptor {
 
     if(jwtToken && username) {
 
+      console.log(JSON.stringify(request.body));
       request = request.clone({
         setHeaders : {
             Authorization : jwtToken
           }
         })
     }
+    console.log(JSON.stringify(request.body));
     return next.handle(request);
   }
 }

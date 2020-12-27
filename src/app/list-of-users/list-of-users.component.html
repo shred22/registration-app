@@ -1,3 +1,20 @@
-<p>
-  list-of-users works!
-</p>
+<table class="table table-striped table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Designation</th>
+      <th scope="col">Department</th>
+      <th scope="col">DOJ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees">
+      <th scope="row">{{employee.employeeId}}</th>
+      <td>{{employee.name}}</td>
+      <td>{{employee.designation}}</td>
+      <td>{{employee.department}}</td>
+      <td>{{employee.dateOfJoining | date}}</td>
+    </tr>
+  </tbody>
+</table>
